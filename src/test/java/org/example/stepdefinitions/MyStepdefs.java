@@ -5,6 +5,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import org.example.baseUtils.BaseUtils;
 
+import static org.example.utils.AllureUtils.allureScreenShot;
+
 public class MyStepdefs extends BaseUtils {
     LoginForm loginForm = new LoginForm();
 
@@ -12,6 +14,7 @@ public class MyStepdefs extends BaseUtils {
     public void user_launched_on_swag_labs() {
         initializePageObjects(loginForm); // Initialize PageFactory elements
         System.out.println("Launched Swag Labs");
+//        allureScreenShot("home",driver);
     }
 
     @When("user enters {string} and {string}")
